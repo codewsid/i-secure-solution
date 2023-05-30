@@ -1,15 +1,36 @@
 ---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import Navbar from "../components/Nav.astro";
+import Button from "../components/Button.astro";
+import ServiceIntro from "../components/ServiceIntro.astro";
+import BorderedButton from "../components/BorderedButton.astro";
+import GradientText from "../components/GradientText.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MasterLayout title="Home">
+  <div>
+    <Navbar />
+
+    <div class="flex">
+      <div class="mt-24">
+        <GradientText content="Fear No More" />
+        <h2 class="text-6xl font-bold">Against Cyber Attacks</h2>
+
+        <p class="max-w-3xl my-5 leading-8">
+          With our cutting-edge technology, expert team, and comprehensive suite
+          of cybersecurity solutions, we are committed to providing robust
+          protection and peace of mind to businesses of all sizes.
+        </p>
+
+        <div class="flex space-x-5 mt-10">
+          <Button link="/services" content="Get 30 Days Trial" />
+          <BorderedButton content="Request Demo" />
+        </div>
+      </div>
+
+      <img class="h-[37rem]" src="/assets/images/hero.png" alt="" />
+    </div>
+
+    <ServiceIntro />
+  </div>
+</MasterLayout>

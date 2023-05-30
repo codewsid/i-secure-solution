@@ -1,0 +1,49 @@
+---
+import Button from "./Button.astro";
+---
+
+<div class="mt-20 text-center">
+  <div class="text-center">
+    <h2 class="text-5xl font-semibold">Manage Security Services</h2>
+    <p class="mt-3 max-w-4xl mx-auto">
+      Secure your digital future with I-Secure Solutions. <br />
+      Together, we'll safeguard your business and ensure your peace of mind.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-3 place-items-center mt-10 gap-10 items-start">
+    <div class="text-center flex flex-col items-center">
+      <img src="../../public/assets/images/risk-assessment.png" alt="" />
+      <h2 class="font-semibold text-2xl">Risk Assessments</h2>
+      <p class="text-lg mt-2">
+        Evaluating an organization's existing security infrastructure,
+        identifying vulnerabilities, and providing recommendations to mitigate
+        risks.
+      </p>
+    </div>
+
+    <div class="text-center flex flex-col items-center">
+      <img src="../../public/assets/images/network-security.png" alt="" />
+      <h2 class="font-semibold text-2xl">Network Security</h2>
+      <p class="text-lg mt-2">
+        Implementing firewalls, intrusion detection and prevention systems, and
+        other technologies to secure the organization's network from
+        unauthorized access and attacks.
+      </p>
+    </div>
+
+    <div class="text-center flex flex-col items-center">
+      <img src="../../public/assets/images/data-encryption.png" alt="" />
+      <h2 class="font-semibold text-2xl">Data Encryption</h2>
+      <p class="text-lg mt-2">
+        Implementing encryption technologies to protect sensitive data both at
+        rest and in transit, ensuring that it remains secure even if it falls
+        into the wrong hands.
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-20">
+    <Button link="/services" content="View all Services" />
+  </div>
+</div>

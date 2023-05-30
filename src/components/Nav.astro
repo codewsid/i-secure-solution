@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<header class="flex items-center justify-between">
+  <a href="/" class="font-semibold text-2xl">
+    i-secure<span class="text-custom-green">.</span>solution
+  </a>
+
+  <nav class="flex items-center justify-between space-x-12 py-7">
+    <a href="#" class="hover:text-custom-green">Home</a>
+    <div class="group">
+      <span class="hover:text-custom-green cursor-pointer">Services</span>
+      <div
+        class="hidden group-hover:grid grid-cols-7 gap-1 bg-custom-bg rounded-bl-md rounded-br-md w-full absolute top-14 shadow z-50 inset-x-0 text-custom-bg h-[32rem] p-10"
+      >
+        <div>
+          <a
+            href="#"
+            class="text-white flex flex-col justify-center items-center"
+          >
+            <img
+              src="../../public/assets/images/data-encryption.png"
+              alt=""
+              class="h-24"
+            />
+            <h2 class="font-semibold text-2xl">Data Encryption</h2>
+          </a>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="hover:text-custom-green">About Us</a>
+    <a
+      href="/"
+      class="relative before:absolute before:h-3 before:w-3 before:rounded-full before:bg-custom-green before:right-0 before:-top-3"
+      ><Icon pack="mdi" name="cart" class="h-6 hover:text-custom-green" /></a
+    >
+    <a
+      href="#"
+      class="hover:text-custom-green bg-white py-1.5 px-4 text-custom-bg"
+      >Contact
+    </a>
+  </nav>
+</header>

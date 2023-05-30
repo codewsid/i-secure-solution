@@ -1,0 +1,21 @@
+---
+import BaseHead from "../partials/BaseHead.astro";
+import Footer from "../partials/Footer.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} />
+  </head>
+  <body
+    class="relative bg-custom-bg h-full text-white text-xl px-32 bg-[url('/assets/svg/mesh.svg')] bg-cover"
+  >
+    <div class="relative">
+      <slot />
+    </div>
+
+    <Footer />
+  </body>
+</html>
