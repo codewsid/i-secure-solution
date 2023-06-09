@@ -1,0 +1,131 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import Navbar from "../components/Nav.astro";
+import Button from "../components/Button.astro";
+import ServiceIntro from "../components/ServiceIntro.astro";
+import BorderedButton from "../components/BorderedButton.astro";
+import GradientText from "../components/GradientText.astro";
+import AddtoCartButton from "../components/AddtoCartButton.astro";
+
+const serviceList = [
+  {
+    img: "/assets/images/risk-assessment.png",
+    title: "Risk Assessment",
+    description:
+      "Evaluating an organization's existing security infrastructure, identifying vulnerabilities, and providing recommendations to mitigate risks.",
+  },
+  {
+    img: "/assets/images/data-encryption.png",
+    title: "Data Encryption",
+    description:
+      "Implementing encryption technologies to protect sensitive data both at rest and in transit, ensuring that it remains secure even if it falls into the wrong hands.",
+  },
+  {
+    img: "/assets/images/network-security.png",
+    title: "Network Security",
+    description:
+      "Implementing firewalls, intrusion detection and prevention systems, and other technologies to secure the organization's network from unauthorized access and attacks.",
+  },
+  {
+    img: "/assets/images/endpoint-security.png",
+    title: "Endpoint Security",
+    description:
+      "Deploying security solutions on endpoints such as computers, laptops, mobile devices, and IoT devices to protect against malware, ransomware, and other threats.",
+  },
+  {
+    img: "/assets/images/siem.png",
+    title: "Security Information and Event Management (SIEM)",
+    description:
+      "Implementing firewalls, intrusion detection and prevention systems, and other technologies to secure the organization's network from unauthorized access and attacks.",
+  },
+  {
+    img: "/assets/images/vulnerable-mngt.png",
+    title: "Vulnerability Management",
+    description:
+      "Deploying security solutions on endpoints such as computers, laptops, mobile devices, and IoT devices to protect against malware, ransomware, and other threats.",
+  },
+  {
+    img: "/assets/images/incident-response.png",
+    title: "Incident Response",
+    description:
+      "Developing and implementing incident response plans to effectively respond to and manage security incidents, including containment, eradication, and recovery procedures.",
+  },
+  {
+    img: "/assets/images/security-training.png",
+    title: "Security Awareness Training",
+    description:
+      "Providing education and training programs to raise awareness among employees about cybersecurity best practices, phishing prevention, and safe online behaviors.",
+  },
+  {
+    img: "/assets/images/compliance.png",
+    title: "Compliance and Regulatory Services",
+    description:
+      "Assisting organizations in achieving and maintaining compliance with industry-specific regulations such as GDPR, HIPAA, PCI-DSS, and others.",
+  },
+  {
+    img: "/assets/images/security-consulting.png",
+    title: "Security Consulting",
+    description:
+      "Offering advisory services to help organizations develop and enhance their overall cybersecurity strategy, policies, and procedures.",
+  },
+  {
+    img: "/assets/images/manage-services.png",
+    title: "Managed Security Services",
+    description:
+      "Providing ongoing monitoring, threat detection, and incident response services on a 24/7 basis, often through a Security Operations Center (SOC).",
+  },
+  {
+    img: "/assets/images/cloud-security.png",
+    title: "Cloud Security",
+    description:
+      "Assessing and securing cloud environments, ensuring that data stored and processed in cloud platforms remains protected from unauthorized access or data breaches.",
+  },
+  {
+    img: "/assets/images/identity-mngt.png",
+    title: "Identity and Access Management",
+    description:
+      "Implementing solutions to manage and control user access to systems and data, including multi-factor authentication and privileged access management.",
+  },
+  {
+    img: "/assets/images/cybersecurity-audits.png",
+    title: "Cybersecurity Audits",
+    description:
+      "Conducting comprehensive assessments of an organization's cybersecurity posture, policies, and procedures to identify gaps and provide recommendations for improvement.",
+  },
+  {
+    img: "/assets/images/incident-response.png",
+    title: "Forensic Investigation",
+    description:
+      "Conducting digital forensic investigations to gather evidence, analyze security incidents, and support legal proceedings if necessary.",
+  },
+];
+---
+
+<MasterLayout title="Services">
+  <div class="text-center w-full mt-10">
+    <GradientText content="i-Secure.Solution Services" />
+    <p class="mt-5">
+      Our wide range of services covers every aspect of cybersecurity. <br />
+      From risk assessments and network security to data encryption and incident
+      response, <br />
+      we tailor our solutions to address your specific needs and ensure your systems
+      and data are secure at all times.
+    </p>
+
+    <div class="grid grid-cols-2 place-items-center gap-7 mt-20">
+      {
+        serviceList.map((data) => (
+          <div class="flex flex-col items-center">
+            <img src={data.img} alt={data.title} />
+            <h3 class="font-bold text-2xl">{data.title}</h3>
+            <p class="text-md mb-5 font-normal mt-2 max-w-xl">
+              {data.description}
+            </p>
+
+            <AddtoCartButton />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</MasterLayout>

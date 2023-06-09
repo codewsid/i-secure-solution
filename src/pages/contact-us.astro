@@ -1,0 +1,66 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import GradientText from "../components/GradientText.astro";
+import Button from "../components/Button.astro";
+---
+
+<MasterLayout title="About i-secure-solution">
+  <div class="mt-10 text-center">
+    <GradientText content="Get in touch with us" />
+
+    <form action="" class="max-w-2xl mx-auto mt-10 space-y-5">
+      <div class="flex flex-col items-start justify-start text-black">
+        <label for="name" class="uppercase font-semibold text-white"
+          >Your Name</label
+        >
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="uppercase w-full mt-2 px-5 py-3 placeholder:text-gray-600"
+          placeholder="Enter your name"
+        />
+      </div>
+      <div class="flex flex-col items-start justify-start text-black">
+        <label for="email" class="uppercase font-semibold text-white"
+          >EMAIL ADDRESS</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="uppercase w-full mt-2 px-5 py-3 placeholder:text-gray-600"
+          placeholder="Enter email address"
+        />
+      </div>
+      <div class="flex flex-col items-start justify-start text-black">
+        <label for="phone" class="uppercase font-semibold text-white"
+          >Phone number</label
+        >
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          class="uppercase w-full mt-2 px-5 py-3 placeholder:text-gray-600"
+          placeholder="Enter phone number"
+        />
+      </div>
+      <div class="flex flex-col items-start justify-start text-black">
+        <label for="message" class="uppercase font-semibold text-white"
+          >Your Message</label
+        >
+        <textarea
+          name="message"
+          id=" message"
+          class="uppercase w-full mt-2 px-5 py-3 placeholder:text-gray-600"
+          cols="20"
+          placeholder="Enter your message here"
+          rows="7"></textarea>
+      </div>
+    </form>
+
+    <div class="mt-10">
+      <Button link="/" content="SEND MESSAGE" />
+    </div>
+  </div>
+</MasterLayout>

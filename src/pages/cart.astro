@@ -1,0 +1,52 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import GradientText from "../components/GradientText.astro";
+import Button from "../components/Button.astro";
+---
+
+<MasterLayout title="About i-secure-solution">
+  <div class="mt-10">
+    <GradientText content="Your Cart" />
+
+    <div class="mt-10">
+      <table class="w-full border-b">
+        <thead>
+          <tr class="py-6 border-b">
+            <th class="py-4 text-left w-[50rem]">Service Name</th>
+            <th class="py-4 text-left w-96">Details</th>
+            <th class="py-4 text-left">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="py-3">Data Encryption</td>
+            <td class="py-3 underline text-custom-green">Details</td>
+            <td class="py-3">$117/month</td>
+          </tr>
+          <tr>
+            <td class="py-3"
+              >Security Information and Event Management (SIEM)</td
+            >
+            <td class="py-3 underline text-custom-green">Details</td>
+            <td class="py-3">$80/month</td>
+          </tr>
+          <tr>
+            <td class="py-3">Endpoint Security</td>
+            <td class="py-3 underline text-custom-green">Details</td>
+            <td class="py-3">$120/month</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="flex justify-end mt-10">
+        <div class="text-right">
+          <div class="mb-10 font-bold flex space-x-20">
+            <h3>Sub-total:</h3>
+            <h3>$317.00</h3>
+          </div>
+          <Button link="/thank-you" content="Proceed to Checkout" />
+        </div>
+      </div>
+    </div>
+  </div>
+</MasterLayout>
